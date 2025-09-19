@@ -1,0 +1,6 @@
+@MahmoudZakaria_APITask_HostAddress = http://localhost:5096
+
+GET {{MahmoudZakaria_APITask_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
