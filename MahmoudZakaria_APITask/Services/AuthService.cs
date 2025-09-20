@@ -45,7 +45,7 @@ namespace MahmoudZakaria_APITask.Services
             await _UserManager.UpdateAsync(user);
 
             Auth.RefreshToken = user.RefreshToken;
-            Auth.RefreshTokenExpiryTime = user.RefreshTokenExpiryTime;
+            Auth.RefreshTokenExpiryTime = user.RefreshTokenExpiryTime ?? default(DateTime);
 
             return Auth;
         }
@@ -97,7 +97,7 @@ namespace MahmoudZakaria_APITask.Services
                 Token = new JwtSecurityTokenHandler().WriteToken(jwtSecurityToken),
                 UserName = user.UserName,
                 RefreshToken = user.RefreshToken,
-                RefreshTokenExpiryTime = user.RefreshTokenExpiryTime
+                RefreshTokenExpiryTime = user.RefreshTokenExpiryTime?? default(DateTime)
             };
 
         }

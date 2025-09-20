@@ -4,6 +4,7 @@ using MahmoudZakaria_APITask.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MahmoudZakaria_APITask.Migrations
 {
     [DbContext(typeof(EComDbContext))]
-    partial class EComDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250920001600_V30")]
+    partial class V30
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -69,7 +72,7 @@ namespace MahmoudZakaria_APITask.Migrations
                             Id = 1,
                             Category = "Electronics",
                             DiscountRate = 0.10000000000000001,
-                            ImagePath = "images/Product.jpg",
+                            ImagePath = "wwwroot/images/Product.jpg",
                             MinimumQuantity = 1,
                             Name = "Smartphone",
                             Price = 699.99m,
@@ -80,7 +83,7 @@ namespace MahmoudZakaria_APITask.Migrations
                             Id = 2,
                             Category = "Electronics",
                             DiscountRate = 0.14999999999999999,
-                            ImagePath = "images/Product.jpg",
+                            ImagePath = "wwwroot/images/Product.jpg",
                             MinimumQuantity = 1,
                             Name = "Laptop",
                             Price = 1299.99m,
@@ -91,7 +94,7 @@ namespace MahmoudZakaria_APITask.Migrations
                             Id = 3,
                             Category = "Home Appliances",
                             DiscountRate = 0.050000000000000003,
-                            ImagePath = "images/Product.jpg",
+                            ImagePath = "wwwroot/images/Product.jpg",
                             MinimumQuantity = 1,
                             Name = "Microwave",
                             Price = 199.99m,
@@ -102,7 +105,7 @@ namespace MahmoudZakaria_APITask.Migrations
                             Id = 4,
                             Category = "Home Appliances",
                             DiscountRate = 0.12,
-                            ImagePath = "images/Product.jpg",
+                            ImagePath = "wwwroot/images/Product.jpg",
                             MinimumQuantity = 1,
                             Name = "Refrigerator",
                             Price = 899.99m,
@@ -113,7 +116,7 @@ namespace MahmoudZakaria_APITask.Migrations
                             Id = 5,
                             Category = "Accessories",
                             DiscountRate = 0.080000000000000002,
-                            ImagePath = "images/Product.jpg",
+                            ImagePath = "wwwroot/images/Product.jpg",
                             MinimumQuantity = 1,
                             Name = "Headphones",
                             Price = 149.99m,

@@ -72,7 +72,18 @@ namespace MahmoudZakaria_APITask
                 });
             });
 
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAngularApp",
+                    policy => policy
+                        .WithOrigins("http://localhost:4200") 
+                        .AllowAnyHeader()
+                        .AllowAnyMethod()
+                        .AllowCredentials());
+            });
+
             var app = builder.Build();
+            app.UseCors("AllowAngularApp");
 
             if (app.Environment.IsDevelopment())
             {
@@ -81,12 +92,10 @@ namespace MahmoudZakaria_APITask
             }
 
             app.UseHttpsRedirection();
-
             app.UseAuthentication();
             app.UseAuthorization();
-
+            app.UseStaticFiles();
             app.MapControllers();
-
             app.Run();
         }
     }

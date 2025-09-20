@@ -51,7 +51,7 @@ namespace MahmoudZakaria_APITask.Models
                     Category = "Electronics",
                     ProductCode = "P01",
                     Name = "Smartphone",
-                    ImagePath = "images/smartphone.jpg",
+                    ImagePath = "images/Product.jpg",
                     Price = 699.99m,
                     MinimumQuantity = 1,
                     DiscountRate = 0.10
@@ -62,7 +62,7 @@ namespace MahmoudZakaria_APITask.Models
                     Category = "Electronics",
                     ProductCode = "P02",
                     Name = "Laptop",
-                    ImagePath = "images/laptop.jpg",
+                    ImagePath = "images/Product.jpg",
                     Price = 1299.99m,
                     MinimumQuantity = 1,
                     DiscountRate = 0.15
@@ -73,7 +73,7 @@ namespace MahmoudZakaria_APITask.Models
                     Category = "Home Appliances",
                     ProductCode = "P03",
                     Name = "Microwave",
-                    ImagePath = "images/microwave.jpg",
+                    ImagePath = "images/Product.jpg",
                     Price = 199.99m,
                     MinimumQuantity = 1,
                     DiscountRate = 0.05
@@ -84,7 +84,7 @@ namespace MahmoudZakaria_APITask.Models
                     Category = "Home Appliances",
                     ProductCode = "P04",
                     Name = "Refrigerator",
-                    ImagePath = "images/refrigerator.jpg",
+                    ImagePath = "images/Product.jpg",
                     Price = 899.99m,
                     MinimumQuantity = 1,
                     DiscountRate = 0.12
@@ -95,7 +95,7 @@ namespace MahmoudZakaria_APITask.Models
                     Category = "Accessories",
                     ProductCode = "P05",
                     Name = "Headphones",
-                    ImagePath = "images/headphones.jpg",
+                    ImagePath = "images/Product.jpg",
                     Price = 149.99m,
                     MinimumQuantity = 1,
                     DiscountRate = 0.08

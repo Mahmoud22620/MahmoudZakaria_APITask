@@ -23,7 +23,6 @@ namespace MahmoudZakaria_APITask.Controllers
         [HttpPost("Register")]
         public async Task<IActionResult> Register([FromBody] RegisterDTO registerDTO)
         {
-            Console.WriteLine($"DTO -> UserName: {registerDTO.UserName}, Email: {registerDTO.Email}, Password: {registerDTO.Password}");
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
@@ -64,7 +63,7 @@ namespace MahmoudZakaria_APITask.Controllers
                 Token = new JwtSecurityTokenHandler().WriteToken(jwtSecurityToken),
                 ExpireOn = jwtSecurityToken.ValidTo,
                 RefreshToken = user.RefreshToken,
-                RefreshTokenExpiryTime = user.RefreshTokenExpiryTime,
+                RefreshTokenExpiryTime = user.RefreshTokenExpiryTime ?? default(DateTime),
                 IsAuthenticated = true,
                 Role = await _UserManager.GetRolesAsync(user) as List<string>
             });
